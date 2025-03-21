@@ -1,0 +1,179 @@
+body {
+    font-family: 'Jura', sans-serif;
+    background-color: #0A1E3C;
+    color: #fff;
+    margin-top: 80px; /* Compensa a altura da navbar fixa */
+}
+
+/*MENU*/
+.navbar {
+    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0A1E3C; /* Fundo da navbar */
+    border-bottom: 2px solid #365782;
+    z-index: 1000;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10em;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: 0.3s;
+    padding-bottom: 0.5em; /* Adicionado para espaçar da borda */
+}
+
+.navbar nav ul li a:hover {
+    color: #11B6F4;
+}
+
+section{
+    height: 100vh;
+}
+
+/* Barrinha ativa */
+.navbar nav ul li a.active {
+    border-bottom: 5px solid;
+    padding-bottom: 0.2em;
+    border-image: linear-gradient(to right, #ffffff 50%, #11B6F4 50%);
+    border-image-slice: 1;
+}
+/*H2 para todos da pagina*/
+h2 {
+    color: #fff; /* Cor do texto */
+    font-size: 2.5em; /* Ajuste o tamanho conforme necessário */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Necessário para o efeito de sombra */
+    text-shadow: 4px 5px 1px #11b8f482; /* Sombra azul suave abaixo do texto */
+
+}
+
+
+
+/*SOBRE MIM*/
+
+/* Estilo do título */
+h1 {
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+#sobre {
+    height: 90vw; /* Altura mínima da seção */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Mantém o conteúdo no topo */
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Contêiner do conteúdo */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 10vw; /* Ajusta o padding lateral para não ocupar toda a tela */
+}
+
+/* Estilo da imagem */
+.forma-inicio {
+    position: relative;
+    margin-left: 0; 
+    padding-left: 0; 
+}
+
+img {
+    width: 75%; /* A imagem ocupa 75% da largura da tela */
+    height: auto;
+    margin-left: 0; 
+    padding-left: 0;
+    
+}
+
+/* Estilo do botão */
+button.botao {
+    width: 79%; /* Largura do botão igual à largura da div de cima */
+    background-color: #11B6F4;
+    border: 2px solid #fff; /* Borda branca */
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 10px; /* Bordas arredondadas no botão */
+    margin-top: 20px; /* Espaço acima do botão */
+    cursor: pointer;
+    display: block; /* Para garantir que o botão ocupe a largura completa */
+    margin-left: auto; /* Centraliza o botão */
+    margin-right: auto; /* Centraliza o botão */
+    box-sizing: border-box; /* Para garantir que o padding não afete a largura */
+}
+
+/* Ícone de download */
+button.botao i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    font-size: 1.5em; /* Tamanho do ícone */
+}
+
+button.botao:hover {
+    background-color: #0a92c3; /* Cor do botão ao passar o mouse */
+}
+
+/* Controlando o tamanho das divs lado a lado */
+.container-divs {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre as divs */
+    margin-top: 2em;
+    width: 80%; /* As divs não ocupam 100% da largura */
+    margin-left: auto;
+    margin-right: auto; /* Centraliza as divs */
+
+}
+
+/* Estilo das divs lado a lado */
+.div1, .div2 {
+    background-color: #0A1E3C; /* Cor de fundo das divs */
+    border: 2px solid #fff; /* Borda branca */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    width: 48%; /* As divs ocupam 48% da largura do container */
+    color: #fff;
+    box-sizing: border-box; /* Para garantir que o padding não afete a largura */
+    text-align:justify;
+    font-size: 25px;
+
+}
+
+/* Centralização das divs no contêiner */
+#centralizar {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Certifica-se de que o espaço ocupado é total dentro do contêiner */
+}
+
+/* HABILIDADES*/
+
+.habilidade img {
+    width: 100px; /* Ajuste o tamanho da imagem */
+    height: 100px; /* Ajuste o tamanho da imagem */
+    border-radius: 50%; /* Torna a imagem redonda */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+}
