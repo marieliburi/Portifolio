@@ -3,6 +3,7 @@ body {
     background-color: #0A1E3C;
     color: #fff;
     margin-top: 80px; /* Compensa a altura da navbar fixa */
+    overflow-x: hidden;
 }
 
 /*MENU*/
@@ -59,7 +60,8 @@ h2 {
     text-align: center; /* Centraliza o texto */
     position: relative; /* Necessário para o efeito de sombra */
     text-shadow: 4px 5px 1px #11b8f482; /* Sombra azul suave abaixo do texto */
-
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 
@@ -77,7 +79,7 @@ h1 {
 
 
 #sobre {
-    height: 90vw; /* Altura mínima da seção */
+    height: auto; /* Altura da seção */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Mantém o conteúdo no topo */
@@ -171,9 +173,43 @@ button.botao:hover {
 
 /* HABILIDADES*/
 
-.habilidade img {
-    width: 100px; /* Ajuste o tamanho da imagem */
-    height: 100px; /* Ajuste o tamanho da imagem */
-    border-radius: 50%; /* Torna a imagem redonda */
-    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+#habilidade {
+    height: auto; /* Removi o valor fixo para evitar problemas de layout */
+    margin-bottom: 50px; /* Adicionei margem inferior para distanciar do botão */
 }
+
+.habilidade img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 5px; /* Espaçamento entre a imagem e o texto */
+}
+
+.container-habilidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 40px 10px; /* Espaço entre as divs */
+    justify-items: center;
+}
+
+.habilidade {
+    background-color: #ffffff28; /* Cor de fundo das divs */
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 3px solid #11B6F4;
+    width: 300px;
+}
+
+.habilidade p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/*PROJETOS*/
+#projetos, h2{
+    margin-top: 4em;
+}
+
+/*CONTATO*/
