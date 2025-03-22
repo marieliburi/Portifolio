@@ -213,3 +213,45 @@ button.botao:hover {
 }
 
 /*CONTATO*/
+/* Container principal de contato */
+.container-contato {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem conforme o espaço */
+    justify-content: center; /* Centraliza os itens na tela */
+    gap: 30px; /* Espaçamento entre os itens */
+    background-color: #142E50; /* Cor de fundo leve */
+    padding: 20px;
+}
+
+/* Estilos para cada item de contato (imagem + texto) */
+.contato-item {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto na horizontal */
+    justify-content: center; /* Garante que os itens fiquem centralizados dentro da div */
+    background-color: #ffffff11; /* Fundo branco para cada item */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 250px; /* Largura fixa para os itens */
+    text-align: center;
+    flex-shrink: 0; /* Impede que os itens encolham */
+}
+
+/* Tamanho das imagens */
+.contato-item img {
+    width: 40px; /* Ajuste no tamanho das imagens */
+    height: 40px;
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Estilo do texto */
+.contato-item p {
+    font-size: 1.3em;
+    color: white;
+    margin: 0;
+
+}
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    outline: none; /* Remove a linha azul ao clicar/focar no link */
+}
