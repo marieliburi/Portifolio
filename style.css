@@ -212,46 +212,63 @@ button.botao:hover {
     margin-top: 4em;
 }
 
+
 /*CONTATO*/
 /* Container principal de contato */
 .container-contato {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens se ajustem conforme o espaço */
-    justify-content: center; /* Centraliza os itens na tela */
-    gap: 30px; /* Espaçamento entre os itens */
-    background-color: #142E50; /* Cor de fundo leve */
+    display: grid; /* Usando grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 15px; /* Distância entre os itens */
+    background-color: #142E50; /* Cor de fundo */
     padding: 20px;
+    width: 100%; /* Garantir que ocupe toda a largura possível */
+    max-width: 900px; /* Limita o tamanho máximo para não ultrapassar */
+    margin: 0 auto; /* Centraliza o container na tela */
+    border: 3px solid #11B6F4; /* Borda azul clara */
+    border-radius: 8px; /* Borda arredondada */
+    box-sizing: border-box; /* Para garantir que o padding e a borda sejam contados dentro da largura total */
+    text-align: center; /* Centraliza o conteúdo da div */
 }
 
 /* Estilos para cada item de contato (imagem + texto) */
 .contato-item {
     display: flex;
-    align-items: center; /* Alinha a imagem e o texto na horizontal */
+    flex-direction: column; /* Alinha a imagem e o texto na vertical */
+    align-items: center; /* Alinha horizontalmente os itens */
     justify-content: center; /* Garante que os itens fiquem centralizados dentro da div */
-    background-color: #ffffff11; /* Fundo branco para cada item */
+    background-color: #ffffff11; /* Fundo branco com leve transparência */
     border-radius: 8px;
-    padding: 15px;
+    padding: 20px; /* Aumenta o padding para dar mais espaço ao conteúdo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width: 250px; /* Largura fixa para os itens */
     text-align: center;
     flex-shrink: 0; /* Impede que os itens encolham */
+    width: 100%; /* Garantir que ocupe toda a largura do container */
+    max-width: 350px; /* Limita o tamanho máximo do item */
+    box-sizing: border-box; /* Para garantir que o padding e a borda sejam contabilizados dentro da largura do item */
 }
 
 /* Tamanho das imagens */
 .contato-item img {
-    width: 40px; /* Ajuste no tamanho das imagens */
-    height: 40px;
-    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+    width: 50px; /* Tamanho das imagens */
+    height: 50px;
+    margin-bottom: 10px; /* Distância entre a imagem e o texto */
 }
 
 /* Estilo do texto */
 .contato-item p {
-    font-size: 1.3em;
+    font-size: 1.4em; /* Aumentei o tamanho da fonte */
     color: white;
     margin: 0;
-
 }
+
 a {
-    text-decoration: none; /* Remove o sublinhado */
-    outline: none; /* Remove a linha azul ao clicar/focar no link */
+    text-decoration: none;
+    outline: none;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container-contato {
+        grid-template-columns: 1fr; /* Para telas menores, exibe 1 item por linha */
+    }
 }

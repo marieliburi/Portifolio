@@ -61,3 +61,16 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/*CONTATO*/
+/* Responsividade: quebra para 2 colunas em telas menores */
+@media (max-width: 768px) {
+    .container-contato {
+        width: 100%; /* Garante que o container ocupe toda a largura da tela em telas menores */
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+    .contato-item {
+        width: auto; /* Largura automática para itens no grid */
+    }
+}
