@@ -63,6 +63,18 @@ h2 {
     padding-top: 1em;
     padding-bottom: 1em;
 }
+.h2Hab {
+    margin-top: 0.2em;
+}
+/*HAMBURGUER*/
+.hamburger {
+    display: none; /* Esconde o ícone em telas grandes */
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 1001; /* Para ficar acima do menu */
+}
 
 
 
@@ -85,6 +97,10 @@ h1 {
     justify-content: flex-start; /* Mantém o conteúdo no topo */
     text-align: center;
     padding-top: 50px;
+}
+
+.subir{
+    margin-top: -10em;
 }
 
 /* Contêiner do conteúdo */
@@ -113,7 +129,7 @@ img {
 
 /* Estilo do botão */
 button.botao {
-    width: 79%; /* Largura do botão igual à largura da div de cima */
+    width: 47em; /* Largura do botão igual à largura da div de cima */
     background-color: #11B6F4;
     border: 2px solid #fff; /* Borda branca */
     color: white;
@@ -128,6 +144,7 @@ button.botao {
     box-sizing: border-box; /* Para garantir que o padding não afete a largura */
 }
 
+
 /* Ícone de download */
 button.botao i {
     margin-right: 10px; /* Espaço entre o ícone e o texto */
@@ -139,16 +156,27 @@ button.botao:hover {
 }
 
 /* Controlando o tamanho das divs lado a lado */
-.container-divs {
+#centralizar {
     display: flex;
+    flex-direction: column;  /* Organiza os itens em uma coluna */
+    align-items: center;  /* Centraliza o conteúdo horizontalmente */
     justify-content: center;
-    gap: 20px; /* Espaço entre as divs */
-    margin-top: 2em;
-    width: 80%; /* As divs não ocupam 100% da largura */
-    margin-left: auto;
-    margin-right: auto; /* Centraliza as divs */
-
+    text-align: center;
 }
+
+.container-divs {
+    display: flex;  /* Para as divs ficarem lado a lado */
+    justify-content: center;  /* Alinha as divs no centro horizontal */
+    gap: 20px;  /* Espaço entre as divs */
+    width: 100%;
+    max-width: 900px;  /* Largura máxima das divs */
+    margin: 0 auto;  /* Centraliza as divs no meio */
+    box-sizing: border-box;
+}
+
+
+
+
 
 /* Estilo das divs lado a lado */
 .div1, .div2 {
@@ -156,7 +184,7 @@ button.botao:hover {
     border: 2px solid #fff; /* Borda branca */
     border-radius: 15px; /* Bordas arredondadas */
     padding: 20px;
-    width: 48%; /* As divs ocupam 48% da largura do container */
+    width: 20em;  /* As divs ocupam 48% da largura do container */
     color: #fff;
     box-sizing: border-box; /* Para garantir que o padding não afete a largura */
     text-align:justify;
@@ -164,12 +192,7 @@ button.botao:hover {
 
 }
 
-/* Centralização das divs no contêiner */
-#centralizar {
-    display: flex;
-    justify-content: center;
-    width: 100%; /* Certifica-se de que o espaço ocupado é total dentro do contêiner */
-}
+
 
 /* HABILIDADES*/
 
@@ -216,35 +239,38 @@ button.botao:hover {
 /*CONTATO*/
 /* Container principal de contato */
 .container-contato {
-    display: grid; /* Usando grid */
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    gap: 15px; /* Distância entre os itens */
-    background-color: #142E50; /* Cor de fundo */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta automaticamente as colunas */
+    gap: 15px;
+    background-color: #142E50;
     padding: 20px;
-    width: 100%; /* Garantir que ocupe toda a largura possível */
-    max-width: 900px; /* Limita o tamanho máximo para não ultrapassar */
-    margin: 0 auto; /* Centraliza o container na tela */
-    border: 3px solid #11B6F4; /* Borda azul clara */
-    border-radius: 8px; /* Borda arredondada */
-    box-sizing: border-box; /* Para garantir que o padding e a borda sejam contados dentro da largura total */
-    text-align: center; /* Centraliza o conteúdo da div */
+    width: 90%; /* Ajusta a largura para ser mais responsiva */
+    max-width: 800px; /* Limita o tamanho máximo */
+    margin: 0 auto;
+    border: 3px solid #11B6F4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
-/* Estilos para cada item de contato (imagem + texto) */
 .contato-item {
     display: flex;
-    flex-direction: column; /* Alinha a imagem e o texto na vertical */
-    align-items: center; /* Alinha horizontalmente os itens */
-    justify-content: center; /* Garante que os itens fiquem centralizados dentro da div */
-    background-color: #ffffff11; /* Fundo branco com leve transparência */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff11;
     border-radius: 8px;
-    padding: 20px; /* Aumenta o padding para dar mais espaço ao conteúdo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex-shrink: 0; /* Impede que os itens encolham */
-    width: 100%; /* Garantir que ocupe toda a largura do container */
-    max-width: 350px; /* Limita o tamanho máximo do item */
-    box-sizing: border-box; /* Para garantir que o padding e a borda sejam contabilizados dentro da largura do item */
+    width: 100%;
+    max-width: 300px; /* Ajuste para garantir que os itens não fiquem grandes demais */
+    box-sizing: border-box;
+    margin: 0 auto; /* Centraliza os itens horizontalmente */
+}
+
+.contato-item:hover{
+    font-size: 17px;
 }
 
 /* Tamanho das imagens */
@@ -266,9 +292,4 @@ a {
     outline: none;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    .container-contato {
-        grid-template-columns: 1fr; /* Para telas menores, exibe 1 item por linha */
-    }
-}
+

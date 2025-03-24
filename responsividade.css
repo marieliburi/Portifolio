@@ -1,11 +1,85 @@
-
 /* RESPONSIVIDADE */
-@media(max-width: 1200px){
-    #sobre {
-        height: 110vw; /* Altura mínima da seção */
+/*Tela 480*/
+@media (max-width: 480px) {
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    button.botao {
+        width: 85%;
+    }
+    img {
+        width: 85%;
+    }
+    .container-habilidades {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* CONTATO */
+/* Responsividade: quebra para 2 colunas em telas menores */
+@media (max-width: 600px) {
+    .container-contato {
+        grid-template-columns: 1fr; /* Para telas menores, exibe 1 item por linha */
+    }
+    .contato-item {
+        width: auto; /* Largura automática para itens no grid */
+    }
+}
+
+/* Mostrar o menu HAMBURGUER em telas pequenas */
 @media (max-width: 768px) {
+    .forma-inicio {
+        display: none;
+    }
+
+    .contato-item img {
+        display: none;
+    }
+
+    .contato-item {
+        width: 90%;
+    }
+
+    .subir {
+        margin-top: -9em;
+    }
+
+    .div1, .div2 {
+        text-align: left;
+    }
+    
+    .h2Hab {
+        margin-top: 18em;
+    }
+
+    button.botao {
+        width: 17.5em;
+    }
+
+    
+
+
+    /* Garantir que as divs fiquem centralizadas */
+    .container-divs {
+        width: 100%; /* Faz com que a largura das divs ocupe toda a largura disponível */
+        display: flex;
+        flex-direction: column; /* Coloca as divs em uma coluna em telas menores */
+        gap: 1em; /* Espaçamento entre as divs */
+        justify-content: center; /* Centraliza as divs verticalmente */
+        align-items: center; /* Centraliza as divs horizontalmente */
+        margin: 0 auto; /* Garante que o container fique centralizado */
+    }
+
+    .div1, .div2 {
+        width: 100%; /* As divs ocupam 100% da largura do container */
+        text-align: center; /* Garante que o conteúdo dentro das divs esteja centralizado */
+    }
+    
+
     .navbar nav ul {
         gap: 3em;
     }
@@ -15,9 +89,12 @@
     .container-divs {
         flex-direction: column;
         gap: 1em;
+        width: 90%; /* Aumenta a largura para que a div não fique tão pequena */
+        margin: 0 auto; /* Centraliza a div */
     }
     .div1, .div2 {
-        width: 90%;
+        width: 100%; /* As divs ocupam 100% da largura do container */
+        text-align: center; /* Garante que o conteúdo dentro da div fique centralizado */
     }
     .container-habilidades {
         grid-template-columns: repeat(2, 1fr);
@@ -43,34 +120,65 @@
     }
 }
 
-@media (max-width: 480px) {
+/*Tela 900*/
+@media (max-width: 900px) { 
+    .hamburger {
+        display: block; /* Mostra o hambúrguer em telas pequenas */
+        position: absolute; /* Faz o hambúrguer se posicionar de forma absoluta */
+        top: 10px; /* Ajuste a distância do topo conforme necessário */
+        right: 10px; /* Coloca o hambúrguer no canto direito da tela */
+        z-index: 1000; /* Garante que o hambúrguer fique acima de outros elementos */
+    }
+    .forma-inicio {
+        width: 80%;
+    }
+    h1{
+        margin-top: -1em;
+    }
     .navbar nav ul {
         flex-direction: column;
-        gap: 1em;
+        align-items: flex-end;
+        position: absolute;
+        top: 80px; /* Ajuste para o menu começar abaixo da navbar */
+        right: 10px;
+        width: 100%;
+        background-color: #0A1E3C;
+        padding: 0.5em 1em; /* Diminui o espaço entre os itens */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility 0.3s ease, opacity 0.3s ease;
     }
-    h2 {
-        font-size: 1.8em;
+
+    .navbar nav ul.show {
+        opacity: 1;
+        visibility: visible;
     }
-    button.botao {
-        width: 85%;
+
+    .navbar nav ul li {
+        margin: 0.5em 0; /* Diminui o espaço entre os tópicos */
     }
-    img {
-        width: 85%;
+
+    .navbar nav ul li ul {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin-top: 0;
+        width: 100%;
+        box-shadow: none;
     }
-    .container-habilidades {
-        grid-template-columns: repeat(2, 1fr);
+
+    .navbar nav ul li:hover ul {
+        display: block;
     }
 }
+/*Tela 1200*/
 
-/*CONTATO*/
-/* Responsividade: quebra para 2 colunas em telas menores */
-@media (max-width: 768px) {
-    .container-contato {
-        width: 100%; /* Garante que o container ocupe toda a largura da tela em telas menores */
-        padding: 10px;
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+@media(max-width: 1200px) {
+    #sobre {
+        height: 110vw; /* Altura mínima da seção */
     }
-    .contato-item {
-        width: auto; /* Largura automática para itens no grid */
-    }
+
 }

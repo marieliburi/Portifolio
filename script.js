@@ -32,3 +32,18 @@ document.querySelectorAll(".navbar nav ul li a").forEach((link) => {
         this.classList.add("active");
     });
 });
+
+function toggleMenu() {
+    const menu = document.querySelector('.navbar nav ul');
+    menu.classList.toggle('show');
+}
+
+// Fecha o menu quando um link é clicado
+const menuLinks = document.querySelectorAll('.navbar nav ul li a');
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const menu = document.querySelector('.navbar nav ul');
+        menu.classList.remove('show');
+    });
+});

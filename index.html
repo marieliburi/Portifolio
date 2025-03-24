@@ -12,9 +12,10 @@
 </head>
 <body>
     <header class="navbar">
+        <span class="hamburger" onclick="toggleMenu()">☰</span>
         <nav>
             <ul>
-                <li><a href="#sobre" class="active">SAIBA MAIS</a></li>
+                <li><a href="#sobre">SAIBA MAIS</a></li>
                 <li><a href="#habilidades">HABILIDADES</a></li>
                 <li><a href="#projetos">PROJETOS</a></li>
                 <li><a href="#contato">CONTATO</a></li>
@@ -28,7 +29,7 @@
         <h1>Desenvolvedora de Sistemas</h1>
 
         <img class="forma-inicio" src="imagens/forma-inicio.png" alt="Imagem com nome e foto da Desenvolvedora">
-
+        <div class="subir">
         <h2>Saiba mais</h2>
         <div id="centralizar">
             <div class="container-divs">
@@ -45,12 +46,12 @@
             <i class="fas fa-download"></i> Baixar Currículo!
         </button>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    </div>
         
     </section>
     <!-- Seção de habilidades-->
     <section id="habilidades">
-        <h2>Habilidades</h2>
+        <h2 class="h2Hab">Habilidades</h2>
         <div class="container-habilidades">
             <div class="habilidade">
                 <img src="imagens/GHtml.png" alt="Habilidade 1">
