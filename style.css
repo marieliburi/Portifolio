@@ -143,7 +143,12 @@ button.botao {
     margin-right: auto; /* Centraliza o botão */
     box-sizing: border-box; /* Para garantir que o padding não afete a largura */
 }
-
+button.botao a {
+    color: white; /* Garante que o texto do link dentro do botão fique branco */
+    text-decoration: none; /* Remove o sublinhado */
+    display: block; /* Faz com que o link ocupe todo o botão */
+    width: 100%; /* Garante que o link ocupe a largura total do botão */
+}
 
 /* Ícone de download */
 button.botao i {
