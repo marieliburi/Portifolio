@@ -10,13 +10,19 @@
         margin: 0 auto; /* Centraliza o container */
         width: 100%;
     }
- 
+
     .div1, .div2 {
         width: 100%; /* Aumenta a largura das divs para 100% */
         padding: 15px;
         box-sizing: border-box; /* Garantir que padding não afete a largura total */
     }
+    .h2Hab{
+        padding-top: 20em;
+    }
 
+    .h2Cont{
+        padding-top: 40em;
+    }
 
     /*Habilidade*/
 
@@ -30,9 +36,31 @@
         width: 100%; /* Faz a grid ocupar toda a largura disponível */
     }
 
-    /* Estilo para cada habilidade */
+    /* Ajusta o layout para 1 coluna em telas menores */
+    .container-habilidades {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo */
+        justify-content: center; /* Centraliza os itens no eixo horizontal */
+        gap: 20px; /* Espaço entre as habilidades */
+    }
 
+    .habilidade {
+        width: 90%; /* Ajusta a largura das habilidades para 90% */
+        margin: 0 auto; /* Centraliza as habilidades */
+    }
 
+    .habilidade p {
+        font-size: 1em; /* Ajusta o tamanho da fonte em telas menores */
+    }
+
+    .habilidade img {
+        width: 100px; /* Ajusta o tamanho das imagens */
+        height: 100px;
+    }
+
+    .h2Projeto{
+        padding-top: 36em;
+    }
 
     }
 
@@ -73,13 +101,28 @@
     .contato-item {
         width: auto; /* Largura automática para itens no grid */
     }
+    .h2Cont span {
+        display: block; /* Força a quebra de linha */
+    }
+
 }
 
 /* Mostrar o menu HAMBURGUER em telas pequenas */
 @media (max-width: 768px) {
+    /*Projeto IMG*/
+    .container-projetos img {
+        display: none;
+    }
+    
+    /*Para ajeitar a altura de cada sessao*/
+    .h2Projeto{
+        margin-top: 11em;
+    } 
+    
     .forma-inicio {
         display: none;
     }
+
 
     .contato-item img {
         display: none;
@@ -105,9 +148,6 @@
         width: 17.5em;
     }
 
-    
-
-
     /* Garantir que as divs fiquem centralizadas */
     .container-divs {
         width: 100%; /* Faz com que a largura das divs ocupe toda a largura disponível */
@@ -129,7 +169,8 @@
         gap: 3em;
     }
     h1 {
-        font-size: 3em;
+        font-size: 2.5em;
+        margin-bottom: 10px;
     }
     .container-divs {
         flex-direction: column;
@@ -173,6 +214,9 @@
         top: 10px; /* Ajuste a distância do topo conforme necessário */
         right: 10px; /* Coloca o hambúrguer no canto direito da tela */
         z-index: 1000; /* Garante que o hambúrguer fique acima de outros elementos */
+    }
+    .menu-name{
+        display: block;
     }
     .hamburger i {
         color: white; /* Garante que o ícone dentro de .hamburger seja branco */
@@ -221,12 +265,38 @@
     .navbar nav ul li:hover ul {
         display: block;
     }
+
+    .h2Hab{
+        margin-top: 2.5em;
+    }
+
+    .container-habilidades {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 40px 0px; /* Menor espaço entre as divs */
+    }
+
+    .habilidade {
+        width: 250px; /* Ajusta a largura das habilidades */
+        
+    }
+    .h2Projeto{
+        margin-top: 12em;
+    }
+}
+
+@media (max-width: 950px) { 
+    .h2Hab{
+        margin-top: 4em;
+    }
 }
 /*Tela 1200*/
 
 @media(max-width: 1200px) {
     #sobre {
         height: 110vw; /* Altura mínima da seção */
+    }
+    .h2Cont{
+        margin-top: 32em;   
     }
 
 }

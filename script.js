@@ -47,3 +47,40 @@ menuLinks.forEach(link => {
         menu.classList.remove('show');
     });
 });
+
+// Mapeamento das seções para os nomes que queremos exibir
+const sectionNames = {
+    sobre: 'SOBRE MIM',
+    habilidades: 'HABILIDADES',
+    projetos: 'PROJETOS',
+    contato: 'CONTATO',
+    home: 'HOME' // Aqui você pode adicionar mais seções caso queira
+};
+
+// Função para atualizar o nome da seção no menu
+function updateMenuName(sectionId) {
+    const menuName = document.getElementById('menu-name');
+    // Verifica se o nome da seção existe no mapeamento, se não, usa o próprio ID
+    menuName.textContent = sectionNames[sectionId] || sectionId.toUpperCase();
+}
+
+// Função para ativar a seção correta ao rolar a página
+window.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('section');
+    let currentSection = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        // Se a rolagem da página estiver no intervalo da seção
+        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    // Atualiza o nome da seção no menu
+    if (currentSection) {
+        document.getElementById('menu-name').textContent = sectionNames[currentSection] || currentSection.toUpperCase();
+    }
+});

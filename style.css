@@ -9,6 +9,17 @@ html, body {
     width: 100%;
     overflow-x: hidden; /* Evita que a página transborde lateralmente */
 }
+/*Menu mobile*/
+/* Estilo para o nome da seção no menu */
+.menu-name {
+    display: none; /* Inicialmente escondido */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+
 
 /*MENU*/
 .navbar {
@@ -185,8 +196,6 @@ button.botao:hover {
 
 
 
-
-
 /* Estilo das divs lado a lado */
 .div1, .div2 {
     background-color: #0A1E3C; /* Cor de fundo das divs */
@@ -200,7 +209,6 @@ button.botao:hover {
     font-size: 25px;
 
 }
-
 
 
 /* HABILIDADES*/
@@ -330,7 +338,7 @@ button.botao:hover {
 /* Container principal de contato */
 
 .h2Cont {
-    margin-top: 800px; /* Garante um bom espaço antes da seção de contato */
+    margin-top: 900px; /* Garante um bom espaço antes da seção de contato */
 }
 
 .container-contato {

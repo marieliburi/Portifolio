@@ -12,13 +12,14 @@
 </head>
 <body>
     <header class="navbar">
-        <span class="hamburger" onclick="toggleMenu()">☰</span>
+        <span class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></span>
         <nav>
+            <div id="menu-name" class="menu-name">Home</div>
             <ul>
-                <li><a href="#sobre">SAIBA MAIS</a></li>
-                <li><a href="#habilidades">HABILIDADES</a></li>
-                <li><a href="#projetos">PROJETOS</a></li>
-                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="#sobre" onclick="updateMenuName('Sobre')">SOBRE MIM</a></li>
+                <li><a href="#habilidades" onclick="updateMenuName('Habilidades')">HABILIDADES</a></li>
+                <li><a href="#projetos" onclick="updateMenuName('Projetos')">PROJETOS</a></li>
+                <li><a href="#contato" onclick="updateMenuName('Contato')">CONTATO</a></li>
             </ul>                
         </nav>
     </header>
@@ -26,11 +27,11 @@
 
     <!-- Seção sobre mim-->
     <section id="sobre">
-        <h1>Desenvolvedora de Sistemas</h1>
+        <br><h1>Desenvolvedora de Sistemas</h1>
 
         <img class="forma-inicio" src="imagens/forma-inicio.png" alt="Imagem com nome e foto da Desenvolvedora">
         <div class="subir">
-        <h2>Saiba mais</h2>
+        <h2>Sobre mim</h2>
         <div id="centralizar">
             <div class="container-divs">
                 <div class="div1">
@@ -81,7 +82,7 @@
 
     <!-- Seção de projetos-->
     <section id="projetos">
-        <h2>Projetos</h2>
+        <h2 class="h2Projeto">Projetos</h2>
         <div class="container-projetos">
             <div class="projeto">
                 <img class="foto-projeto" src="imagens/desinfect20-1.jpg" alt="Imagem projeto 1">
@@ -91,7 +92,7 @@
                     <p>Esse robô tem como objetivo principal desinfectar as mãos sem que a pessoa precise tocar o frasco, pois se  estiver contaminada pode infectar outras através da parte que foi tocada.</p>
                     <p>Data: Set. 2020</p>
                     <div class="botoes">
-                        <button  onclick="window.open('https://drive.google.com/drive/u/0/folders/1JHrOQTLmX71hdPoobLEDZBKoM9ra3j3d', '_blank');"  class="botao-d">Documentação</button>
+                        <button  onclick="window.open('https://drive.google.com/drive/u/0/folders/1JHrOQTLmX71hdPoobLEDZBKoM9ra3j3d', '_blank');"  class="botao-d">Ver mais</button>
                         <button class="botao-g" style="display: none;"></style>>Git Hub</button>
                     </div>
                 </div>
@@ -108,7 +109,7 @@
                     <p>Data: De fev. a dez. 2023</p>
                     <div class="botoes">
                         <button onclick="window.open('https://drive.google.com/drive/u/0/folders/1JHrOQTLmX71hdPoobLEDZBKoM9ra3j3d', '_blank');" class="botao-d">Ver mais</button>
-                        <button class="botao-g">Git Hub</button>
+                        <button class="botao-g"  style="display: none;">Git Hub</button>
                     </div>
                 </div>
             </div>
@@ -134,14 +135,14 @@
             </div>
             <!--Assistencia social-->
             <div class="projeto">
-                <img class="foto-projeto" src="imagens/desinfect20-1.jpg" alt="Imagem projeto 1">
+                <img class="foto-projeto" src="imagens/bd.png" alt="Imagem projeto 1">
                 <div class="info">
                     <h3>Assistencia social</h3>
-                    <p>Descrição: Aqui insira uma breve descrição do projeto</p>
+                    <p>Descrição: Projeto de modelagem de dados para um sistema de assistência social, incluindo casos de uso, diagramas de sequência e atividades. Focado em representar e otimizar processos como cadastro de benefícios, aprovação, agendamento de visitas e geração de laudos. </p>
                     <p>Data: De fev. a dez. 2024</p>
                     <div class="botoes">
-                        <button class="botao-d">Ver mais</button>
-                        <button class="botao-g">Git Hub</button>
+                        <button onclick="window.open('https://github.com/marieliburi/Assistencia-Social/blob/main/EGN-AssistenciaSocial-Felipe-Marieli-2024.pdf', '_blank');" class="botao-d">Ver mais</button>
+                        <button onclick="window.open('https://github.com/marieliburi/Assistencia-Social', '_blank');"class="botao-g">Git Hub</button>
                     </div>
                 </div>
             </div>
@@ -150,7 +151,7 @@
 
     <!-- Seção de contato-->
     <section id="contato">
-        <h2 class="h2Cont">Informações de Contato</h2>
+        <h2 class="h2Cont">Informações de <span>Contato</span></h2>
         <div class="container-contato">
             <div class="contato-item">
                 <a href="mailto:mariburi2105@gmail.com" target="_blank">
