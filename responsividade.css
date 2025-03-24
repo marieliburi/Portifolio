@@ -17,11 +17,11 @@
         box-sizing: border-box; /* Garantir que padding não afete a largura total */
     }
     .h2Hab{
-        padding-top: 20em;
+        padding-top: 21.4em;
     }
 
     .h2Cont{
-        padding-top: 40em;
+        padding-top: 59em;
     }
 
     /*Habilidade*/
@@ -59,7 +59,7 @@
     }
 
     .h2Projeto{
-        padding-top: 36em;
+        padding-top: 38em;
     }
 
     }
@@ -211,7 +211,7 @@
     .hamburger {
         display: block; /* Mostra o hambúrguer em telas pequenas */
         position: absolute; /* Faz o hambúrguer se posicionar de forma absoluta */
-        top: 10px; /* Ajuste a distância do topo conforme necessário */
+        justify-items: center;
         right: 10px; /* Coloca o hambúrguer no canto direito da tela */
         z-index: 1000; /* Garante que o hambúrguer fique acima de outros elementos */
     }
