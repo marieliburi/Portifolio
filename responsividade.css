@@ -1,4 +1,49 @@
 /* RESPONSIVIDADE */
+/**/
+/* Estilo para a container-divs em telas pequenas */
+@media (max-width: 414px) and (min-width: 360px) {
+    .container-divs {
+        display: flex;
+        flex-wrap: wrap; /* Faz com que as divs se ajustem dentro do contêiner */
+        justify-content: space-between; /* Garante que as divs fiquem separadas e alinhadas */
+        gap: 15px; /* Adiciona espaço entre as divs */
+        margin: 0 auto; /* Centraliza o container */
+        width: 100%;
+    }
+ 
+    .div1, .div2 {
+        width: 100%; /* Aumenta a largura das divs para 100% */
+        padding: 15px;
+        box-sizing: border-box; /* Garantir que padding não afete a largura total */
+    }
+
+
+    /*Habilidade*/
+
+    /* Ajuste para habilidades em uma única coluna */
+    .container-habilidades {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px; /* Espaço entre as habilidades */
+        justify-items: center;
+        margin: 0 auto;
+        width: 100%; /* Faz a grid ocupar toda a largura disponível */
+    }
+
+    /* Estilo para cada habilidade */
+
+
+
+    }
+
+    /* Para ajustar o conteúdo das divs quando necessário */
+    .div1, .div2 {
+        padding: 10px;
+        box-sizing: border-box;
+}
+
+
+
 /*Tela 480*/
 @media (max-width: 480px) {
     .navbar nav ul {
@@ -6,7 +51,7 @@
         gap: 1em;
     }
     h2 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
     button.botao {
         width: 85%;
@@ -128,6 +173,9 @@
         top: 10px; /* Ajuste a distância do topo conforme necessário */
         right: 10px; /* Coloca o hambúrguer no canto direito da tela */
         z-index: 1000; /* Garante que o hambúrguer fique acima de outros elementos */
+    }
+    .hamburger i {
+        color: white; /* Garante que o ícone dentro de .hamburger seja branco */
     }
     .forma-inicio {
         width: 80%;
