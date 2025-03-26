@@ -19,6 +19,31 @@ html, body {
     text-align: center;
 }
 
+/*Efeito de escrita*/
+.writing-effect {
+    display: inline-block;
+    white-space: nowrap; /* Impede que o texto quebre para a linha seguinte */
+    overflow: hidden; /* Garante que o texto não exceda o espaço da caixa */
+    border-right: 4px solid #ffffff; /* Cria o cursor de digitação */
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* O "cursor" pisca */
+    }
+}
+
 
 
 /*MENU*/
@@ -39,7 +64,7 @@ html, body {
 .navbar nav ul {
     list-style-type: none;
     display: flex;
-    gap: 10em;
+    gap: 15em;
     margin: 0;
     padding: 0;
 }
