@@ -85,21 +85,17 @@
 
 /* CONTATO - Responsividade */
 @media (max-width: 600px) {
-    .container-contato {
-        grid-template-columns: 1fr;
-    }
-
     .contato-item {
-        width: auto;
+        min-height: 90px; /* Aumenta a altura para telas menores */
+        padding: 20px;
+        margin-left: 5%;
     }
-
-    .h2Cont span {
-        display: block;
-    }
+    
 }
 
 /* Menu HAMBURGUER em telas pequenas */
 @media (max-width: 768px) {
+
     /* Projeto IMG */
     .container-projetos img {
         display: none;
@@ -122,6 +118,14 @@
         width: 90%;
     }
 
+    h1{
+        padding-top: 0.5em;
+        padding-bottom: 2.5em;
+    }
+    .writing-effect {
+        white-space: normal; /* Permite que o texto quebre para a linha */
+        width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+    }
     .subir {
         margin-top: -9em;
     }
