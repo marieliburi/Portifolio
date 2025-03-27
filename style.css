@@ -360,64 +360,76 @@ button.botao:hover {
 
 
 /*CONTATO*/
-/* Container principal de contato */
-
+/* Estilos de Contato */
+/* Estilos de Contato */
+/* Estilos de Contato */
 .h2Cont {
-    margin-top: 1200px; /* Garante um bom espaço antes da seção de contato */
+    margin-top: 1200px;
+    text-align: center;
+    color: #ffffff;
 }
 
 .container-contato {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta automaticamente as colunas */
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
     background-color: #142E50;
-    padding: 20px;
-    width: 90%; /* Ajusta a largura para ser mais responsiva */
-    max-width: 800px; /* Limita o tamanho máximo */
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
     margin: 0 auto;
     border: 3px solid #11B6F4;
     border-radius: 8px;
     box-sizing: border-box;
-    text-align: center;
+    color: white;
 }
 
 .contato-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #ffffff11;
+    justify-content: space-between;
+    background-color: #ffffff23;
+    padding: 10px 20px;
+    margin-bottom: 15px;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 300px; /* Ajuste para garantir que os itens não fiquem grandes demais */
     box-sizing: border-box;
-    margin: 0 auto; /* Centraliza os itens horizontalmente */
 }
 
-.contato-item:hover{
-    font-size: 17px;
-}
-
-/* Tamanho das imagens */
 .contato-item img {
-    width: 50px; /* Tamanho das imagens */
-    height: 50px;
-    margin-bottom: 10px; /* Distância entre a imagem e o texto */
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
 }
 
-/* Estilo do texto */
 .contato-item p {
-    font-size: 1.4em; /* Aumentei o tamanho da fonte */
-    color: white;
     margin: 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-a {
+.contato-item p strong {
+    min-width: 120px;
+}
+
+.contato-item a {
+    color: #11B6F4;
     text-decoration: none;
-    outline: none;
+    margin-left: auto;
+    text-align: right;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contato-item a:hover {
+    text-decoration: underline;
 }
 
 
