@@ -19,30 +19,6 @@ html, body {
     text-align: center;
 }
 
-/*Efeito de escrita*/
-.writing-effect {
-    display: inline-block;
-    white-space: nowrap; /* Impede que o texto quebre para a linha seguinte */
-    overflow: hidden; /* Garante que o texto não exceda o espaço da caixa */
-    border-right: 4px solid #ffffff; /* Cria o cursor de digitação */
-    width: 0;
-    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent; /* O "cursor" pisca */
-    }
-}
 
 .botao, .botao-d, .botao-g {
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -120,18 +96,52 @@ h2 {
     z-index: 1001; /* Para ficar acima do menu */
 }
 
+/* CONTAINER DOS BADGES */
+.badges-container {
+    display: flex;
+    flex-direction: column; /* Um abaixo do outro */
+    align-items: center;
+    gap: 15px; /* Espaço entre os badges */
+}
+
+/* BADGES */
+.badge-blue,
+.badge-orange {
+    font-size: 32px; /* Maior destaque */
+    font-weight: bold;
+    padding: 16px 32px;
+    border-radius: 10px;
+    display: inline-flex; /* Mantém apenas o tamanho do conteúdo */
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 400px; /* Limita o tamanho máximo */
+    width: auto; /* Mantém um tamanho adequado ao conteúdo */
+    min-width: 250px; /* Evita que fique muito pequeno */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.badge-blue {
+    background-color: #1E3A8A; /* Azul escuro */
+    color: white;
+}
+
+.badge-orange {
+    background-color: #D97706; /* Laranja */
+    color: white;
+}
+
+.badge-blue i,
+.badge-orange i {
+    font-size: 36px; /* Ajusta tamanho do ícone */
+}
 
 
 /*SOBRE MIM*/
 
 /* Estilo do título */
-h1 {
-    font-size: 5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
+
 
 
 #sobre {
