@@ -26,7 +26,6 @@ html, body {
 
 /*MENU*/
 
-
 .navbar {
     padding: 2em 0;
     display: flex;
@@ -107,7 +106,7 @@ h2 {
 /* BADGES */
 .badge-blue,
 .badge-orange {
-    font-size: 32px; /* Maior destaque */
+    font-size: 40px; /* Maior destaque */
     font-weight: bold;
     padding: 16px 32px;
     border-radius: 10px;
@@ -120,6 +119,7 @@ h2 {
     min-width: 250px; /* Evita que fique muito pequeno */
     text-align: center;
     margin-bottom: 10px;
+    margin-left: 12px;
 }
 
 .badge-blue {
@@ -134,15 +134,13 @@ h2 {
 
 .badge-blue i,
 .badge-orange i {
-    font-size: 36px; /* Ajusta tamanho do ícone */
+    font-size: 30px; /* Ajusta tamanho do ícone */
 }
 
 
 /*SOBRE MIM*/
 
 /* Estilo do título */
-
-
 
 #sobre {
     height: auto; /* Altura da seção */
@@ -154,7 +152,7 @@ h2 {
 }
 
 .subir{
-    margin-top: -10em;
+    margin-top: -12em;
 }
 
 /* Contêiner do conteúdo */
@@ -178,6 +176,7 @@ img {
     height: auto;
     margin-left: 0; 
     padding-left: 0;
+    margin-top: -7em;
     
 }
 
@@ -233,7 +232,9 @@ button.botao:hover {
     box-sizing: border-box;
 }
 
-
+.h2Sobre{
+    margin-bottom: -0.5em;
+}
 
 /* Estilo das divs lado a lado */
 .div1, .div2 {
@@ -246,23 +247,7 @@ button.botao:hover {
     box-sizing: border-box; /* Para garantir que o padding não afete a largura */
     text-align:justify;
     font-size: 25px;
-
 }
-
-
-/* HABILIDADES*/
-
-#habilidade {
-    height: auto; /* Removi o valor fixo para evitar problemas de layout */
-    margin-bottom: 50px; /* Adicionei margem inferior para distanciar do botão */
-}
-
-.habilidade img {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 5px; /* Espaçamento entre a imagem e o texto */
-}
-
 .container-habilidades {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
@@ -270,20 +255,46 @@ button.botao:hover {
     justify-items: center;
 }
 
+
+/* HABILIDADES*/
+
+#habilidade {
+    height: auto;
+    margin-bottom: 50px;
+}
+
+/* Ajusta a disposição dos elementos dentro da div */
 .habilidade {
-    background-color: #ffffff28; /* Cor de fundo das divs */
+    background-color: #ffffff28;
     border-radius: 15px;
     padding: 15px;
     text-align: center;
     box-sizing: border-box;
     border: 3px solid #11B6F4;
     width: 300px;
+    min-height: 220px; /* Define altura mínima para alinhar os elementos */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza os elementos verticalmente */
 }
 
+/* Garante que a imagem fique bem posicionada */
+.habilidade img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px; /* Dá espaço entre a imagem e o texto */
+    margin-top: 10px;
+}
+
+/* Ajusta o texto para não ocupar muito espaço */
 .habilidade p {
     font-size: 1.2em;
     font-weight: bold;
+    margin-top: 10px; /* Se precisar, pode ajustar esse valor */
 }
+
 
 
 /*PROJETOS*/
@@ -322,8 +333,9 @@ button.botao:hover {
 .foto-projeto {
     width: 180px;
     height: auto;
-    border-radius: 8px; /* Deixa as bordas arredondadas, se quiser */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destacar */
+    border-radius: 8px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-top: 0.1px;
     transition: transform 0.3s; /* Suaviza o efeito ao passar o mouse */
 }
 
@@ -374,9 +386,7 @@ button.botao:hover {
 
 
 /*CONTATO*/
-/* Estilos de Contato */
-/* Estilos de Contato */
-/* Estilos de Contato */
+
 .h2Cont {
     margin-top: 1200px;
     text-align: center;
@@ -415,6 +425,7 @@ button.botao:hover {
     width: 40px;
     height: 40px;
     margin-right: 15px;
+    margin-top: 0.1px;
 }
 
 .contato-item p {

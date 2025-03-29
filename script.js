@@ -60,8 +60,8 @@ const sectionNames = {
 // Função para atualizar o nome da seção no menu
 function updateMenuName(sectionId) {
     const menuName = document.getElementById('menu-name');
-    // Verifica se o nome da seção existe no mapeamento, se não, usa o próprio ID
-    menuName.textContent = sectionNames[sectionId] || sectionId.toUpperCase();
+    // Converte para minúsculas e verifica se existe no mapeamento
+    menuName.textContent = sectionNames[sectionId.toLowerCase()] || sectionId.toUpperCase();
 }
 
 // Função para ativar a seção correta ao rolar a página

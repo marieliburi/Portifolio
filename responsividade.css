@@ -18,11 +18,11 @@
     }
 
     .h2Hab {
-        padding-top: 21.4em;
+        padding-top: 15em;
     }
 
     .h2Cont {
-        padding-top: 59em;
+        padding-top: 53.7em;
     }
 
     /* Habilidades - Ajuste para uma única coluna */
@@ -49,7 +49,12 @@
     }
 
     .h2Projeto {
-        padding-top: 38em;
+        padding-top: 33em;
+    }
+    .badge-blue,
+    .badge-orange {
+        font-size: 30px; /* Maior destaque */
+        margin-left: 10px;
     }
 }
 
@@ -100,6 +105,9 @@
     .container-projetos img {
         display: none;
     }
+    .h2Sobre{
+        margin-top: -3em;
+    }
 
     /* Ajuste na altura das seções */
     .h2Projeto {
@@ -127,7 +135,7 @@
         width: 100%; /* Garante que o texto ocupe toda a largura disponível */
     }
     .subir {
-        margin-top: -9em;
+        margin-top: -3em;
     }
 
     .div1, .div2 {
@@ -213,10 +221,6 @@
         width: 80%;
     }
 
-    h1 {
-        margin-top: -1em;
-    }
-
     .navbar nav ul {
         flex-direction: column;
         align-items: flex-end;
@@ -275,4 +279,5 @@
         margin-top: 32em;
     }
 }
+
 
