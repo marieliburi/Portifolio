@@ -4,6 +4,7 @@ body {
     color: #fff;
     margin-top: 80px; /* Compensa a altura da navbar fixa */
     overflow-x: hidden;
+    margin-left: 0;
 }
 html, body {
     width: 100%;
@@ -426,6 +427,11 @@ button.botao:hover {
     height: 40px;
     margin-right: 15px;
     margin-top: 0.1px;
+}
+.contato-item .img-tel{
+    width: 30px;
+    height: 30px;
+    padding: 3px;
 }
 
 .contato-item p {
