@@ -84,3 +84,36 @@ window.addEventListener('scroll', function () {
         document.getElementById('menu-name').textContent = sectionNames[currentSection] || currentSection.toUpperCase();
     }
 });
+
+// Função para alternar entre modo claro e escuro
+function toggleDarkMode() {
+    const body = document.body;
+
+    // Verifica se o modo claro está ativado
+    if (document.getElementById('theme-toggle').checked) {
+        // Ativa o modo claro
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+    } else {
+        // Ativa o modo escuro
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode');
+    }
+}
+
+// Verificar o estado do switch ao carregar a página
+document.addEventListener('DOMContentLoaded', function () {
+    // Verificar no localStorage se o usuário escolheu o modo escuro ou claro
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.getElementById('theme-toggle').checked = false; // Modo escuro, então a checkbox não é marcada
+        document.body.classList.add('dark-mode');
+    } else {
+        document.getElementById('theme-toggle').checked = true; // Modo claro
+        document.body.classList.add('light-mode');
+    }
+});
+
+// Armazenar preferências de tema no localStorage
+document.getElementById('theme-toggle').addEventListener('change', function () {
+    localStorage.setItem('darkMode', !document.getElementById('theme-toggle').checked);
+});

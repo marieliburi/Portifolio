@@ -21,6 +21,11 @@
                 <li><a href="#projetos" onclick="scrollToSection('projetos')">PROJETOS</a></li>
                 <li><a href="#contato" onclick="scrollToSection('contato')">CONTATO</a></li>
             </ul>              
+            <!-- Botão de modo noturno -->
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle" onchange="toggleDarkMode()">
+                <span class="slider"></span>
+            </label>      
         </nav>
     </header>
     <script src="script.js"></script>
@@ -170,7 +175,7 @@
         <h2 class="h2Cont">Informações de <span>Contato</span></h2>
         <div class="container-contato">
             <div class="contato-item">
-                <img src="imagens/email.png" alt="Email">
+                <img src="imagens/email.png" class="img-email" alt="Email">
                 <p>Email:</p>
                 <a href="mailto:mariburi2105@gmail.com" target="_blank">mariburi2105@gmail.com</a>
             </div>
@@ -180,12 +185,12 @@
                 <a href="https://wa.me/5514997747527"  target="_blank">(14) 99774-7527</a>
             </div>
             <div class="contato-item">
-                <img src="imagens/insta.png" alt="Instagram">
+                <img src="imagens/insta.png" class="insta" alt="Instagram">
                 <p>Instagram:</p>
                 <a href="https://www.instagram.com/marieliburi" target="_blank">@marieliburi</a>
             </div>
             <div class="contato-item">
-                <img src="imagens/linkedin.png" alt="LinkedIn">
+                <img src="imagens/linkedin.png" class="img-linkedin" alt="LinkedIn">
                 <p>LinkedIn:</p>
                 <a href="https://www.linkedin.com/in/marieli-buri/" target="_blank">Marieli Buri</a>
             </div>

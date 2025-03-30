@@ -210,9 +210,7 @@ button.botao i {
     font-size: 1.5em; /* Tamanho do ícone */
 }
 
-button.botao:hover {
-    background-color: #0a92c3; /* Cor do botão ao passar o mouse */
-}
+
 
 /* Controlando o tamanho das divs lado a lado */
 #centralizar {
@@ -249,6 +247,12 @@ button.botao:hover {
     text-align:justify;
     font-size: 25px;
 }
+body.dark-mode .div2{
+    background-color: #0A1E3C; /* Cor de fundo das divs */
+    border: 2px solid #fff; /* Borda branca */
+    color: #fff;
+}
+
 .container-habilidades {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
@@ -381,9 +385,7 @@ button.botao:hover {
     opacity: 0.8;
 }
 
-.botao-d:hover {
-    background-color: #0056b3;  /* Cor do fundo quando o botão é hover */
-}
+
 
 
 /*CONTATO*/
@@ -464,4 +466,177 @@ button.botao:hover {
     text-decoration: underline;
 }
 
+/*CSS PARA MODO NOTURNO*/
+/* Posiciona o switch no canto direito */
+.switch {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 34px;
+}
 
+/* Esconde a checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Barra deslizante */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cecece42;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+body.light-mode .slider {
+    background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo escura no modo claro */
+    transition: 0.4s;
+    border-radius: 34px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.268); /* Adiciona uma sombra com borda */
+}
+
+body.dark-mode .slider {
+    background-color: rgba(255, 255, 255, 0.3); /* Cor de fundo clara no modo escuro */
+    transition: 0.4s;
+    border-radius: 34px;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7); /* Adiciona uma sombra com borda */
+}
+
+/* Círculo do switch */
+.slider:before {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    width: 26px;
+    height: 26px;
+    background-color: #0A1E3C;
+    transition: 0.4s;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "🌙"; /* Lua */
+}
+
+/* Cor quando ativado */
+input:checked + .slider {
+    background-color: #fdfdf64b;
+}
+
+/* Movimenta o círculo e troca o ícone */
+input:checked + .slider:before {
+    transform: translateX(26px);
+    content: "☀️"; /* Sol */
+    background-color: #ffffff;
+    
+}
+
+/* Adicionando os estilos para o Modo Claro */
+
+body.light-mode {
+    background-color: #ededed; /* Fundo claro */
+    color: #000000; /* Texto escuro */
+}
+
+body.light-mode .navbar {
+    background-color: #ffffff; /* Navbar clara */
+    border-bottom: 2px solid #ddd; /* Barra inferior da navbar clara */
+}
+
+body.light-mode .navbar nav ul li a {
+    color: #0A1E3C; /* Links escuros no modo claro */
+}
+
+/* Barra do switch */
+.switch input:checked + .slider {
+    background-color: #fdfdf64b;
+}
+
+.switch input:checked + .slider:before {
+    background-color: #ffffff; /* Círculo do switch no modo claro */
+    color: #000; /* Ícone no círculo */
+}
+
+body.light-mode .navbar {
+    background-color:#ededed; /* Navbar de fundo claro */
+}
+
+body.light-mode h2{
+    color:#142E50;
+}
+body.light-mode .container-contato {
+    background-color: #fff; /* Fundo branco para a seção de contato */
+    color: #333; /* Texto escuro */
+}
+
+body.light-mode .div1, .div2 {
+    background-color: #eaeaea; /* Cor de fundo mais clara para essas divs */
+    color: #000;
+    border: 2px solid #000;
+}
+
+
+
+body.light-mode .botao{
+    background-color: #0077b6; /* Cor do botão */
+    color: #fff; /* Texto do botão branco */
+    border: 2px solid #000;
+}
+
+body.light-mode .botao-d:hover, .botao-g:hover {
+    background-color: #efa122; /* Hover dos botões */
+}
+
+
+body.light-mode .contato-item {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px inset #ccc;
+    transition: border 0.3s ease; 
+}
+
+
+/* Estilo quando o mouse passar sobre o elemento */
+body.light-mode .contato-item:hover {
+    border: 2px outset #ccc;
+}
+
+body.light-mode .img-tel {
+    content: url('imagens/tel-preto.png');
+    width: 35px;
+    height: 35px;
+}
+body.light-mode .insta {
+    content: url('imagens/instagram-preto.png');
+}
+
+body.light-mode .img-linkedin {
+    content: url('imagens/linkedin-preto.png');
+}
+body.light-mode .img-email {
+    content: url('imagens/email-preto.png');
+}
+body.light-mode .habilidade{
+    background-color: #fff;
+}
+
+/*DARK*/
+body.light-mode .container-item {
+    background-color: #afafaf; /* Cor para o fundo dos containers no modo claro */
+  } 
+
+body.dark-mode h2 {
+    color: #fff; 
+}

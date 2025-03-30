@@ -213,9 +213,25 @@
         display: block;
     }
 
-    .hamburger i {
-        color: white;
+   /* No modo claro */
+    body.light-mode .hamburger i {
+        color: black; /* Muda a cor do ícone para preto */
     }
+
+    body.light-mode .menu-name {
+        color: black; /* Muda a cor do texto do menu para preto */
+    }
+
+    /* Caso o fundo do menu também precise ser alterado */
+    body.light-mode .navbar nav ul {
+        background-color: #ededed; /* Cor de fundo do menu */
+    }
+
+    body.light-mode .navbar nav ul li {
+        color: black; /* Muda a cor do texto no menu */
+    }
+
+    
 
     .forma-inicio {
         width: 80%;
@@ -228,7 +244,7 @@
         top: 80px;
         right: 10px;
         width: 100%;
-        background-color: #0A1E3C;
+        background-color: #ededed;
         padding: 0.5em 1em;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         opacity: 0;
