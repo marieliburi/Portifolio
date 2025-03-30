@@ -258,6 +258,7 @@ body.dark-mode .div2{
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
     gap: 40px 10px; /* Espaço entre as divs */
     justify-items: center;
+
 }
 
 
@@ -278,11 +279,20 @@ body.dark-mode .div2{
     border: 3px solid #11B6F4;
     width: 300px;
     min-height: 220px; /* Define altura mínima para alinhar os elementos */
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Centraliza os elementos verticalmente */
+        /* Sombra interna à esquerda e externa à direita */
+        box-shadow: 
+        4px 4px 10px #11b8f4a9,  /* Externa no lado direito */
+        inset 1px 1px 10px rgba(0, 0, 0, 0.3); /* Interna no lado esquerdo */
+}
+
+.habilidade:hover {
+    transform: translateY(-5px);
+
+    transition: 0.3s ease-in-out;
 }
 
 /* Garante que a imagem fique bem posicionada */
@@ -373,6 +383,7 @@ body.dark-mode .div2{
     transition: background-color 0.3s;
 }
 
+
 .botao-d {
     background-color: #11B6F4;
 }
@@ -450,9 +461,17 @@ body.dark-mode .div2{
 .contato-item p strong {
     min-width: 120px;
 }
+body.ligth-mode .container-item a{
+    color: #1168f4;
+}
 
+
+body.light-mode .contato-item a:hover {
+    color: #033c5b; 
+    transition: color 0.3s ease;
+}
 .contato-item a {
-    color: #11B6F4;
+    color: #0a9dd3;
     text-decoration: none;
     margin-left: auto;
     text-align: right;
@@ -498,10 +517,10 @@ body.dark-mode .div2{
 }
 
 body.light-mode .slider {
-    background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo escura no modo claro */
+    background-color: rgba(0, 0, 0, 0.3); 
     transition: 0.4s;
     border-radius: 34px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.268); /* Adiciona uma sombra com borda */
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.268); 
 }
 
 body.dark-mode .slider {
@@ -587,18 +606,18 @@ body.light-mode .div1, .div2 {
     border: 2px solid #000;
 }
 
-
-
 body.light-mode .botao{
     background-color: #0077b6; /* Cor do botão */
-    color: #fff; /* Texto do botão branco */
+    color: #fff; 
     border: 2px solid #000;
 }
 
 body.light-mode .botao-d:hover, .botao-g:hover {
-    background-color: #efa122; /* Hover dos botões */
+    background-color: #efa122; 
 }
-
+body.dark-mode .botao-d:hover, .botao-g:hover {
+    background-color: #efa122; 
+}
 
 body.light-mode .contato-item {
     background-color: #ffffff;
@@ -606,12 +625,11 @@ body.light-mode .contato-item {
     border: 2px inset #ccc;
     transition: border 0.3s ease; 
 }
-
-
 /* Estilo quando o mouse passar sobre o elemento */
 body.light-mode .contato-item:hover {
     border: 2px outset #ccc;
 }
+
 
 body.light-mode .img-tel {
     content: url('imagens/tel-preto.png');
@@ -632,6 +650,9 @@ body.light-mode .habilidade{
     background-color: #fff;
 }
 
+
+
+
 /*DARK*/
 body.light-mode .container-item {
     background-color: #afafaf; /* Cor para o fundo dos containers no modo claro */
@@ -639,4 +660,14 @@ body.light-mode .container-item {
 
 body.dark-mode h2 {
     color: #fff; 
+}
+
+/*Dark CONTATO*/
+body.dark-mode .contato-item {
+    border: 2px inset #0077b6;
+    transition: border 0.3s ease; 
+}
+/* Estilo quando o mouse passar sobre o elemento */
+body.dark-mode .contato-item:hover {
+    border: 2px outset #0077b6;
 }
